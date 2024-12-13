@@ -25,6 +25,10 @@ def test_calc(answer, current, numbers)
   mutl_answer = test_calc(answer, current * cur_num, numbers.dup)
   return true if mutl_answer
 
+  # check concat (Part 2)
+  concat_answer = test_calc(answer, "#{current}#{cur_num}".to_i, numbers.dup)
+  return true if concat_answer
+
   false
 end
 
